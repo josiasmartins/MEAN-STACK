@@ -1,4 +1,5 @@
 module.exports = function(app) {
+    
     app.get('/v1/fotos', function(req, res) {
 
         var fotos = [
@@ -9,15 +10,5 @@ module.exports = function(app) {
         res.json(fotos);
         console.log('Tentando obter as fotos');
     });
-    
-    app.get('/v1/grupos', function(req, res) {
-        
-        var grupos = [
-            { _id: 1, nome: 'esporte' },
-            { _id: 1, nome: 'esporte' },
-            { _id: 1, nome: 'esporte' }
-        ];
-    
-        res.json(grupos);
-    });
+
 }
