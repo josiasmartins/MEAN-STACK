@@ -1,0 +1,47 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Users\\josias.m.caitano\\AppData\\Local\\nvs\\node\\6.17.1\\x64\\node.exe',
+1 verbose cli   'C:\\Users\\josias.m.caitano\\AppData\\Local\\nvs\\node\\6.17.1\\x64\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'start' ]
+2 info using npm@3.10.10
+3 info using node@v6.17.1
+4 verbose run-script [ 'prestart', 'start', 'poststart' ]
+5 info lifecycle alurapic-mean@1.0.0~prestart: alurapic-mean@1.0.0
+6 silly lifecycle alurapic-mean@1.0.0~prestart: no script for prestart, continuing
+7 info lifecycle alurapic-mean@1.0.0~start: alurapic-mean@1.0.0
+8 verbose lifecycle alurapic-mean@1.0.0~start: unsafe-perm in lifecycle true
+9 verbose lifecycle alurapic-mean@1.0.0~start: PATH: C:\Users\josias.m.caitano\AppData\Local\nvs\node\6.17.1\x64\node_modules\npm\bin\node-gyp-bin;C:\Users\josias.m.caitano\OneDrive - Accenture\Documents\projetos\nodeJs\alurapic-MEAN\alurapic-MEAN\node_modules\.bin;C:\Users\josias.m.caitano\AppData\Local\nvs\node\6.17.1\x64;C:\Program Files\WindowsApps\Microsoft.PowerShell_7.2.6.0_x64__8wekyb3d8bbwe;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Microsoft SDKs\Azure\CLI2\wbin;C:\Python310\Scripts\;C:\Python310\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\Symantec\VIP Access Client\;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X64\;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X86\;C:\Program Files (x86)\Common Files\Pulse Secure\VC142.CRT\X64\;C:\Program Files (x86)\Common Files\Pulse Secure\VC142.CRT\X86\;C:\ProgramData\chocolatey\bin;C:\MinGw\bin;C:\Program Files\Java\jdk1.8.0_311\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Kubernetes\Minikube;C:\Users\josias.m.caitano\AppData\Roaming\nvm;C:\PostegreSQL\13.6\bin;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Users\josias.m.caitano\AppData\Local\Microsoft\WindowsApps;C:\Users\josias.m.caitano\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\josias.m.caitano\AppData\Local\Programs\Git\cmd;C:\Users\josias.m.caitano\AppData\Roaming\npm;C:\Users\josias.m.caitano\AppData\Roaming\nvm;C:\Users\josias.m.caitano\AppData\Local\nvs\;C:\Users\josias.m.caitano\maven\apache-maven-3.8.5\bin;C:\Users\josias.m.caitano\.dotnet\tools;C:\Users\josias.m.caitano\Downloads\flutter_windows_3.3.1-stable\flutter\bin;
+10 verbose lifecycle alurapic-mean@1.0.0~start: CWD: C:\Users\josias.m.caitano\OneDrive - Accenture\Documents\projetos\nodeJs\alurapic-MEAN\alurapic-MEAN
+11 silly lifecycle alurapic-mean@1.0.0~start: Args: [ '/d /s /c', 'node server.js' ]
+12 silly lifecycle alurapic-mean@1.0.0~start: Returned: code: 1  signal: null
+13 info lifecycle alurapic-mean@1.0.0~start: Failed to exec start script
+14 verbose stack Error: alurapic-mean@1.0.0 start: `node server.js`
+14 verbose stack Exit status 1
+14 verbose stack     at EventEmitter.<anonymous> (C:\Users\josias.m.caitano\AppData\Local\nvs\node\6.17.1\x64\node_modules\npm\lib\utils\lifecycle.js:255:16)
+14 verbose stack     at emitTwo (events.js:106:13)
+14 verbose stack     at EventEmitter.emit (events.js:191:7)
+14 verbose stack     at ChildProcess.<anonymous> (C:\Users\josias.m.caitano\AppData\Local\nvs\node\6.17.1\x64\node_modules\npm\lib\utils\spawn.js:40:14)
+14 verbose stack     at emitTwo (events.js:106:13)
+14 verbose stack     at ChildProcess.emit (events.js:191:7)
+14 verbose stack     at maybeClose (internal/child_process.js:920:16)
+14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:230:5)
+15 verbose pkgid alurapic-mean@1.0.0
+16 verbose cwd C:\Users\josias.m.caitano\OneDrive - Accenture\Documents\projetos\nodeJs\alurapic-MEAN\alurapic-MEAN
+17 error Windows_NT 10.0.19043
+18 error argv "C:\\Users\\josias.m.caitano\\AppData\\Local\\nvs\\node\\6.17.1\\x64\\node.exe" "C:\\Users\\josias.m.caitano\\AppData\\Local\\nvs\\node\\6.17.1\\x64\\node_modules\\npm\\bin\\npm-cli.js" "start"
+19 error node v6.17.1
+20 error npm  v3.10.10
+21 error code ELIFECYCLE
+22 error alurapic-mean@1.0.0 start: `node server.js`
+22 error Exit status 1
+23 error Failed at the alurapic-mean@1.0.0 start script 'node server.js'.
+23 error Make sure you have the latest version of node.js and npm installed.
+23 error If you do, this is most likely a problem with the alurapic-mean package,
+23 error not with npm itself.
+23 error Tell the author that this fails on your system:
+23 error     node server.js
+23 error You can get information on how to open an issue for this project with:
+23 error     npm bugs alurapic-mean
+23 error Or if that isn't available, you can get their info via:
+23 error     npm owner ls alurapic-mean
+23 error There is likely additional logging output above.
+24 verbose exit [ 1, true ]
