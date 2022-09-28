@@ -1,3 +1,5 @@
+const app = require('../../config/express');
+
 var api = {};
 
 var fotos = [
@@ -29,6 +31,13 @@ api.removePorId = function(req, res) {
 
     res.sendStatus(204);
 
-}
+};
+
+app.adiciona = function(req, res) {
+
+    console.log(req.body);
+    req.body;
+
+};
 
 module.exports = api;
