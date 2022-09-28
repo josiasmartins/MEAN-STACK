@@ -1,14 +1,7 @@
+var api = require('../api/grupo');
+
 module.exports = function(app) {
 
-    app.get('/v1/grupos', function(req, res) {
-        
-        var grupos = [
-            { _id: 1, nome: 'esporte' },
-            { _id: 1, nome: 'esporte' },
-            { _id: 1, nome: 'esporte' }
-        ];
-    
-        res.json(grupos);
-    });
+    app.get('/v1/grupos', api.lista);
     
 }
