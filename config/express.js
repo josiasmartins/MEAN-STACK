@@ -12,8 +12,9 @@ app.use(bodyParser.json());
 // require('../app/routes/grupo')(app);
 // consign: faz o require de todos os arquivos do routes
 consign({ cwd: 'app' })
-    .include('api')
-    .include('routes')
+    .include('models')
+    .then('api')
+    .then('routes')
     .into(app);
 
 // exportar
