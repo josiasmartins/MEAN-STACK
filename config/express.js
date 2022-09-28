@@ -9,8 +9,9 @@ app.use(express.static('./public'));
 // require('../app/routes/foto')(app);
 // require('../app/routes/grupo')(app);
 // consign: faz o require de todos os arquivos do routes
-consign()
-    .include('app/routes')
+consign({ cwd: 'app' })
+    .include('api')
+    .include('routes')
     .into(app);
 
 // exportar
