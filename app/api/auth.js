@@ -5,10 +5,11 @@ module.exports = function(app) {
     var model = mongoose.model('Usuario');
     
     api.autentica = function(req, res) {
-    
+        console.log('xuxa');
+        console.log(req.body);
         model
             .findOne({login: req.body.login, senha: req.body.senha})
-            then(function(usuario) {
+            .then(function(usuario) {
                 if (!usuario) {
                     console.log('Login e senha inválidos');
                     res.sendStatus(401);
@@ -16,6 +17,10 @@ module.exports = function(app) {
                     var token = jwt.sign(usuario.login, app.get('secret'), {
                         expiresIn: 84600
                     });
+
+                    console.log('Token criado e sendo no header de resposta');
+                    res.set('x-access-token', token);
+                    res.send();
                 }
             }, function() {
                 console.log('Login e senha inválidos');
@@ -24,8 +29,27 @@ module.exports = function(app) {
     
     }
     
-    api.verificaToken = function(req, res) {
+    api.verificaToken = function(req, res, next) {
+        
+        var token = req.headers['x-access-token'];
+        if (token) {
+            console.log('Verificando Token...');
+            jwt.verify(token, app.get('secret'), function(err, decoded) {
     
+                if (err) {
+                    console.log('Token rejeitado');
+                    res.send(401);
+                }
+                req.usuario = decoded;
+                next();
+            });
+        } else {
+            console.log('Token não foi enviado');
+            res.sendStatus(401);
+        }
+
     }
+
+    return api;
 
 };
