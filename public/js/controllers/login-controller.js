@@ -7,6 +7,7 @@ angular.module('alurapic')
         $scope.autenticar = function() {
 
             var usuario = $scope.usuario;
+            
             $http.post('/autenticar', 
                 {login: usuario.login, senha: usuario.senha})
                 then(function() {
