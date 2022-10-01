@@ -20,7 +20,7 @@ module.exports = function(app) {
 
                     console.log('Token criado e sendo no header de resposta');
                     res.set('x-access-token', token);
-                    res.send();
+                    res.end();
                 }
             }, function() {
                 console.log('Login e senha inválidos');
@@ -35,10 +35,9 @@ module.exports = function(app) {
         if (token) {
             console.log('Verificando Token...');
             jwt.verify(token, app.get('secret'), function(err, decoded) {
-    
                 if (err) {
                     console.log('Token rejeitado');
-                    res.send(401);
+                    res.sendStatus(401);
                 }
                 req.usuario = decoded;
                 next();
