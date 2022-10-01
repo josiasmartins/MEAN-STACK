@@ -4,7 +4,8 @@ var consign = require('consign');
 var bodyParser = require('body-parser');
 
 // configurações do express
-// middleare: são filtro aplicado nas requisições
+// middleare: são filtro aplicado nas requisições;
+app.set('secret', 'homemavestruz');
 app.use(express.static('./public'));
 app.use(bodyParser.json());
 
