@@ -1,5 +1,6 @@
 const app = require('../../config/express');
 var mongoose = require('mongoose');
+const { Model } = require('mongoose');
 
 var api = {};
 
@@ -79,6 +80,16 @@ api.adiciona = function(req, res) {
 
     // console.log(req.body);
     // req.body;
+
+    model
+        .create(req.body)
+        .then(function(foto) {
+            res.json(foto);
+        }, function(error) {
+            console.log(error);
+            res.status(500).json(error);
+        });
+
 };
 
 api.atualiza = function(req, res) {
@@ -93,6 +104,17 @@ api.atualiza = function(req, res) {
     // fotos[indece] = foto;
 
     // res.sendStatus(200);
+
+    Model
+        .findByIdAndUpdate(req.params.id, req.body)
+        .then(function(foto) {
+
+            res.json(foto);
+            
+        }, function(err) {
+            console.log(err);
+            res.status(500).json(err);
+        });
 
 }
 
