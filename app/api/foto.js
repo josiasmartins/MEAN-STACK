@@ -3,6 +3,8 @@ var mongoose = require('mongoose');
 
 var api = {};
 
+var model = mongoose.model('Foto');
+
 // var CONTADOR = 2;
 
 // var fotos = [
@@ -15,7 +17,6 @@ api.lista = function(req, res) {
     // res.json(fotos);
     // console.log('Tentando obter as fotos');
     
-    var model = mongoose.model('Foto');
 
     model
         .find({})
@@ -36,6 +37,18 @@ api.buscaPorId = function(req, res) {
 
     // res.json(foto);
 
+    model
+        .findById(req.params.id)
+        .then(function(foto) {
+
+            if (!foto) throw new Error('Foto não encontrado');
+            res.json(foto);
+
+        }, function(error) {
+            console.log(error);
+            res.status(404).json(error);
+        });
+
 };
 
 api.removePorId = function(req, res) {
@@ -45,6 +58,15 @@ api.removePorId = function(req, res) {
     // });
 
     // res.sendStatus(204);
+
+    model
+        .remove({_id: req.params.id})
+        .then(function() {
+            res.sendStatus(204);
+        }, function() {
+            console.log(error);
+            res.status(500).json(error);
+        })
 
 };
 

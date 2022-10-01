@@ -31,5 +31,15 @@ module.exports = function(uri) {
     
     });
 
-}
+};
+
+
+/**
+ * mongodb
+ * 
+ *  Um documento é uma estrutura muito semelhante ao JSON, com a diferença de que possui mais tipos.
+ * Para agrupar documentos, é utilizado coleções (collections), que são análogas as tabelas de um banco de dados relacional.
+ * Dentro de uma collection, podemos salvar documentos com estrutura diferentes.
+ * Documentos são gravados na estrutura BSON
+ */
 
