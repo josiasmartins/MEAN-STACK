@@ -13,6 +13,16 @@ angular.module('alurapic')
             return response;
         }
 
+        interceptor.request = function(config) {
+            config.headers = config.headers || {};
+            if ($window.sessionStorage.token) {
+                config.headers['x-access-token'] = $window.sessionStorage.token;
+                console.log('Adicionando token no header da requisição pra ser enviado para o servidor');
+            }
+
+            return config;
+        }
+
         return interceptor;
 
     })
